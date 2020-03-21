@@ -23,7 +23,7 @@ jobs:
         run: |
           mix deps.get
           npm install -g semantic-release@15
-          npm install -g @semantic-release/exec
+          npm install @semantic-release/exec -D
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
