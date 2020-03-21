@@ -20,8 +20,9 @@ jobs:
           elixir-version: 1.9.4 # Define the elixir version [required]
           otp-version: 22.2 # Define the OTP version [required]
       - name: Install dependencies
-        run: npm ci
-        run: mix deps.get
+        run: |
+          npm ci
+          mix deps.get
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
